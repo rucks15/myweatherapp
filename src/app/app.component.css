@@ -1,0 +1,152 @@
+
+.root__container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 0.5fr auto;
+    position: relative;
+  }
+  
+  /*
+  ================
+      Header
+  ================
+  */
+  
+  
+  /*Header*/
+  .main__header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.25fr;
+    grid-template-rows: 1fr;
+    background-color: white;
+    box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
+    height: 4rem;
+    margin: 0;
+    align-items: center;
+    transition: background-color 500ms linear;
+    animation: 1s ease-in-out 0ms 1 fadein;
+  }
+  
+ 
+  
+  .toggle-button__container {
+    cursor: pointer;
+    position: relative;
+    margin: 0 0.5rem;
+  }
+  
+ 
+  /*Content*/
+  .left__section {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    max-width: 5rem;
+  }
+  
+  .date__text {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    display: inline;
+    margin: 0.5rem 0;
+  }
+  
+  /*SVGs*/
+  .hamburger__icon {
+    position: relative;
+    z-index: 100;
+    width: 2rem;
+    height: 1rem;
+    left:0;
+    padding: 0.5rem 1.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  
+  .logo__icon {
+    position: absolute;
+    left: 0;
+    height: 1rem;
+    margin-left: 2rem;
+  }
+  
+  .logo__text {
+    fill: #2B244D;
+  }
+  
+  
+  
+  .hamburger__icon__fill {
+    fill: #2B244D;
+  }
+  
+  
+  
+  /*
+  ================
+      Body
+  ================
+  */
+  
+  .main-container__bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    background: yellowgreen;
+  }
+  
+  /*
+  ================-
+      Footer
+  ================
+  */
+  .main__footer {
+    background: transparent;
+    position: absolute;
+    bottom: 1rem;
+    left: 1.5rem;
+    z-index: 100;
+    right: 1rem;
+  }
+  
+  .copyright__text {
+    letter-spacing: 0.1rem;
+    color:black;
+  }
+  .fa {
+    padding: 10px;
+    font-size: 25px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook{
+  float: right;
+  right:1rem;
+  color: white;
+}
+.fa-twitter {
+  color: white;
+  float: right;
+  }
+.fa-instagram {
+  float:right;
+  color: white;
+  }
+
+  
+  @media only screen and (max-width: 300px) {
+    .slide-menu {
+      width: 100%;
+    }
+  }
