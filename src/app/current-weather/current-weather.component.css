@@ -1,0 +1,23 @@
+/*.partly-cloudy{
+    height:auto;
+    width: 20px;
+}
+.sunny{
+    position: relative;
+    left: 1rem;
+}
+.rainy{
+    position: relative;
+    left: 1rem;
+}
+.thunderstorm{
+    position: relative;
+    left: 1rem;
+}*/
+.climate-grid-container{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: auto auto;
+    text-align:center;
+    align-content: center;
+}

@@ -71,6 +71,7 @@
     left: 0;
     height: 1rem;
     margin-left: 2rem;
+    z-index: -1;
   }
   
   .logo__text {
@@ -97,8 +98,16 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -2;
+    z-index: -3;
     background: yellowgreen;
+  }
+  .weather-component{
+    position: relative;
+    align-items: center;
+    height: 5rem;
+    width: 5rem;
+    left: 30%;
+    text-decoration-color: black;
   }
   
   /*
