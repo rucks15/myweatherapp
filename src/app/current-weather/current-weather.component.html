@@ -1,11 +1,11 @@
-<div class="climate-grid-container">
-  <img id="partly-cloudy" src="../../assets/images/if_09_cloudy_sun_happy_emoticon_weather_smiley_3375691.svg"/>
-  <img id="sunny" src="../../assets/images/if_02_sun_smile_happy_emoticon_weather_smiley_3375687.svg"/>
-  <img id="rainy" src="../../assets/images/if_06_rain_cloud_cry_emoticon_weather_smiley_3375694.svg"/>
-  <img id="thunderstorm" src="../../assets/images/if_08_thunder_cloud_angry_emoticon_weather_smiley_3375692.svg"/>
-  <span>Partly&nbsp;cloudy</span>
-  <span>Sunny</span>
-  <span>Rainy</span>
-  <span>Thunderstorm</span>
+<div style="text-align:center">
+<div>
+  <span>{{current.city}},{{current.country}}</span><br>
+  <span>{{current.date | date:'fullDate'}}</span>
 </div>
-
+<div>
+  <img [src] = 'current.image'>
+  <span>{{current.temperature | number: '1.0-0'}}&#8457;</span>
+  <span>{{current.description}}</span>
+</div>
+</div>
