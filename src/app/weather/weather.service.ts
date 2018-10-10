@@ -23,10 +23,22 @@ interface ICurrentWeatherData{
 })
 export class WeatherService {
   constructor(private httpClient: HttpClient) {}
-  getCurrentWeather(city: string, country: string)
+  getCurrentWeather(search: string | number, country ?: string)
   {
+    let uriparams='';
+    if(typeof search === 'string')
+    {
+      uriparams = `q=${search}`
+    }
+    else{
+      uriparams=`zip=${search}`
+    }
+    if(country)
+    {
+      uriparams=`${uriparams},${country}`
+    }
     return this.httpClient.get<ICurrentWeatherData>(
-      `${environment.baseUrl}api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${environment.appId}`
+      `${environment.baseUrl}api.openweathermap.org/data/2.5/weather?${uriparams}&appid=${environment.appId}`
     ).pipe(map(data => this.transformToICurrentWeather(data)))
   }
 

@@ -1,0 +1,11 @@
+
+<form>
+  <mat-form-field class=search-form>
+    <mat-icon matPrefix class="material-icons">search </mat-icon>
+    <!--Below line : Property binding happens, formControl(HTML) value is got from search(Component) -->
+    <input matInput placeholder="Enter City,Country or Zipcode" type="text" [formControl]="search">
+    <mat-hint>Ex: Seattle,USA or 98021</mat-hint>
+    <mat-error *ngIf="search.invalid" >{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+</form>
+  

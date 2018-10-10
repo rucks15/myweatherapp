@@ -46,7 +46,7 @@
         </div>
 
         <h3 class="date__text">Today</h3>
-
+        
 
         <div class="mode-toggle__container">
             <span class="mode-toggle__text">Light</span>
@@ -58,11 +58,14 @@
             </label>
             <span class="mode-toggle__text"> Dark</span>
         </div>
-
+        
     </header>
     <main class="main__container">
-        <div class="main-container__bg" [ngClass]="{'main-container__bg-dark': darkModeActive}"></div>
-        <app-current-weather></app-current-weather>
+       <div class="main-container__bg" [ngClass]="{'main-container__bg-dark': darkModeActive}"></div>
+        <mat-card class="main-card-content" style="background:linear-gradient(to bottom, #00FF9B, #5f84fb);">
+            <app-search-box style="text-align: center" (searchEvent)="doSearch($event)"></app-search-box> 
+            <app-current-weather [current]="currentWeather"></app-current-weather>
+        </mat-card>
     </main>
 
     <footer class="main__footer">

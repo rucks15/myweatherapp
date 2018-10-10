@@ -270,6 +270,16 @@
   background: white;
   transition: opacity 300ms linear;
 }
+.main-card-content{
+  max-width: 25%;
+  text-align: center;
+  height: 30%;
+  left: 35%;
+  top: 2rem;
+  position: relative;
+  border-style: solid;
+  border-color: gainsboro;
+}
 
 .main-container__bg-dark {
   opacity: 1;
