@@ -9,12 +9,10 @@ import { WeatherService } from '../weather/weather.service';
 })
 export class CurrentWeatherComponent implements OnInit {
   @Input() current : ICurrentWeather;
-
   constructor(private weatherService: WeatherService) {
-    
   }
   ngOnInit() {
     
   }
-
 }
+//component app-current-weather implements IcurrentWeather Interface and WeatherService Interface
